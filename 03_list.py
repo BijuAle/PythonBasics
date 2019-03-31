@@ -38,6 +38,38 @@ m = ['a', 'b', 'c', 'd']
 for index, value in enumerate(m):
     print('{0}: {1}'.format(index, value))
 
- # Find most frequent item
+# Find most frequent item
 test = [1, 2, 3, 4, 2, 2, 3, 1, 4, 4, 4]
 print(max(set(test), key=test.count))
+
+# List Comprehensions:
+
+# Get list of sqaures of first 100 numbers
+squares = [x**2 for x in range(1, 101)]
+print(squares)
+
+# Get remainders of squares of first 100 numbers divided by 5
+remainders = [x**2 % 5 for x in range(1, 101)]
+print(remainders)
+
+
+# Get Movies with title starting with letter G
+movies = ['Star Wars', 'Gandhi', 'Shawshank Redemption', 'Goodwill Haunting', 'Gone with the wind', 'Rear Windows']
+movies2 = [title for title in movies if title.startswith('G')]
+print(movies2)
+
+# Get movies released before 2000
+movies = [('Star Wars', 2000), ('Gandhi', 1999), ('Shawshank Redemption', 1990), ('Goodwill Haunting', 2001), ('Gone with the wind', 1966), ('Rear Windows', 1956)]
+movies2 = [title for (title, year) in movies if year < 2000]
+print(movies2)
+
+# List as Vector - Scalar Multiplication
+v = [2, -3, 1]
+v2 = [x * 4 for x in v]
+print(v2)
+
+# Get cartesian product
+A = [1, 3, 5, 7]
+B = [2, 4, 6, 8]
+cartesian_prod = [(a, b) for a in A for b in B]
+print(cartesian_prod)
