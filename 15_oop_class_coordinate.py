@@ -22,6 +22,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
 class Coordinate:
     '''
     This is a class for a 2d coordinate,
@@ -44,6 +45,7 @@ c = Coordinate(3, 1)
 o = Coordinate(2, 2)
 
 print(c)
+str(c)
 help(c)
 
 print(c.distance(o))
